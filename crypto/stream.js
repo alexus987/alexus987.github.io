@@ -18,7 +18,7 @@ var createDom = function(pair) {
 	wrapper.appendChild(div);
 };
 
-var displayQuote = function(_quote) {
+var displayQuote = function(_quote) { 
 
 	var fsym = CCC.STATIC.CURRENCY.SYMBOL[_quote.FROMSYMBOL];
 	var tsym = CCC.STATIC.CURRENCY.SYMBOL[_quote.TOSYMBOL];
@@ -70,7 +70,7 @@ var socket = io.connect('https://streamer.cryptocompare.com/');
 //Format: {SubscriptionId}~{ExchangeName}~{FromSymbol}~{ToSymbol}
 //Use SubscriptionId 0 for TRADE, 2 for CURRENT and 5 for CURRENTAGG
 //For aggregate quote updates use CCCAGG as market
-var subscription = ['5~CCCAGG~BTC~EUR','5~CCCAGG~ETH~EUR','5~CCCAGG~DASH~EUR','5~CCCAGG~LTC~EUR','5~CCCAGG~ICN~EUR'];
+var subscription = ['5~CCCAGG~BTC~EUR','5~CCCAGG~ETH~EUR','5~CCCAGG~DASH~EUR','5~CCCAGG~LTC~EUR','5~CCCAGG~ICN~EUR']; 
 
 socket.emit('SubAdd', {subs:subscription} );
 
